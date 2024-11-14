@@ -1,0 +1,38 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="glasluisaS6B.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label 
+            Text="Semana 6: WS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ListView x:Name="lvEstudiantes" ItemSelected="lvEstudiantes_ItemSelected">
+            <ListView.Header>
+         
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Código" WidthRequest="50"/>
+                    <Label Text="Nombre" WidthRequest="100"/>
+                    <Label Text="Apellido" WidthRequest="100"/>
+                    <Label Text="Edad" WidthRequest="50"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                     
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding codigo}" WidthRequest="50"/>
+                            <Label Text="{Binding nombre}" WidthRequest="100"/>
+                            <Label Text="{Binding apellido}" WidthRequest="100"/>
+                            <Label Text="{Binding edad}" WidthRequest="50"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnAbrir"
+                Clicked="btnAbrir_Clicked"
+                Text="Añadir estudiante"/>
+    </VerticalStackLayout>
+</ContentPage>
