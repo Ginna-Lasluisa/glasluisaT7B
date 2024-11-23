@@ -4,7 +4,7 @@
              Title="vEstudiante">
     <VerticalStackLayout>
         <Label 
-            Text="Semana 6: WS"
+            Text="Semana 7: WS"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <ListView x:Name="lvEstudiantes" ItemSelected="lvEstudiantes_ItemSelected">
